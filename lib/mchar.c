@@ -97,11 +97,11 @@ format_byte_size(char *str, long size) {
 	const long ONE_M = ONE_K * ONE_K;
 
 	if (size < ONE_K)
-		sprintf(str, "%ldb", size);
+		sprintf(str, "%ldB", size);
 	else if (size < ONE_M)
-		sprintf(str, "%ldkb", size / ONE_K);
+		sprintf(str, "%ldKiB", size / ONE_K);
 	else
-		sprintf(str, "%.2fM", (float)size / (ONE_M));
+		sprintf(str, "%.2fMiB", (float)size / (ONE_M));
 
 	return str;
 }
